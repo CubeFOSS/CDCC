@@ -4,3 +4,8 @@ best way to install is by going to the edge extension page but you can also down
 
 
 link to store: soon
+
+before: 
+![image](https://user-images.githubusercontent.com/52253797/139543707-b2e3ad44-59a3-4401-933d-eba13a8e6c42.png)
+after:
+![image](https://user-images.githubusercontent.com/52253797/139543716-ee089618-90a0-44a8-bd1d-70ea523605d0.png)
