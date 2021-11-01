@@ -1,26 +1,35 @@
 {
-    "manifest_version":2,
-    "browser_action":{
-        "browser_style":true,
-        "default_titel":"CDCC",
-        "default_popup":"options.html"
-    },
-    "name":"Cube Discord Colour",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cubediscordcolour@sio2.tech"
+    }
+  },
+    "manifest_version": 2,
+    "name": "Cube Discord Colour",
+    "description": "Changes the colour of the discord widget on the cubecraft forums",
     "version": "1.0.0",
-    "description": "changes the colour of the discord thing on the cube site",
-    "permissions":[
-        "storage"
+    "icons": {
+      "64": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": [    
+          "*://cubecraft.net/*",
+          "*://cubecraft.net/",
+          "*://*.cubecraft.net/",
+          "*://*.cubecraft.net/*"
+        ],
+        "js":["edit.js"]
+      }
     ],
-    "options_page":"options.html",
-    "content_scripts":[
-        {
-            "matches": [    
-                "*://cubecraft.net/*",
-                "*://cubecraft.net/",
-                "*://*.cubecraft.net/",
-                "*://*.cubecraft.net/*"
-            ],
-            "js":["edit.js"]
-        }
-    ]    
-}
+    "browser_action": {
+      "default_icon": {
+        "64": "icon.png"
+      },
+      "default_popup": "index.html",
+      "default_title": "Cube Discord Colour"
+    },
+    "options_ui": {
+      "page": "index.html"
+    }
+  }
