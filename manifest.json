@@ -1,38 +1,31 @@
 {
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "cubediscordcolour@sio2.tech"
-      }
+  "manifest_version":3,
+  "action":{
+      "default_popup":"options.html"
   },
-  "manifest_version": 2,
-  "name": "Cube Discord Colour",
-  "description": "Changes the colour of the discord widget on the cubecraft forums",
-  "version": "1.0.1",
-  "icons": {
-    "64": "icon.png"
-  },
-  "content_scripts": [
-    {
-      "matches": [    
-        "*://cubecraft.net/*",
-        "*://cubecraft.net/",
-        "*://*.cubecraft.net/",
-        "*://*.cubecraft.net/*"
-      ],
-      "js":["edit.js"]
-    }
-  ],
-  "browser_action": {
-    "default_icon": {
-      "64": "icon.png"
-    },
-    "default_popup": "index.html",
-    "default_title": "Cube Discord Colour"
-  },
-  "options_ui": {
-    "page": "index.html"
-  },
+  "name":"Cube Discord Colour",
+  "version": "1.0.0",
+  "description": "changes the colour of the discord thing on the cube site",
   "permissions":[
-    "storage"
-  ]
+      "storage",
+      "scripting"
+  ],
+  "host_permissions":[
+      "*://cubecraft.net/*",
+      "*://cubecraft.net/",
+      "*://*.cubecraft.net/",
+      "*://*.cubecraft.net/*"
+  ],
+  "options_page":"options.html",
+  "content_scripts":[
+      {
+          "matches": [    
+              "*://cubecraft.net/*",
+              "*://cubecraft.net/",
+              "*://*.cubecraft.net/",
+              "*://*.cubecraft.net/*"
+          ],
+          "js":["edit.js"]
+      }
+  ]    
 }
