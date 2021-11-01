@@ -1,6 +1,6 @@
 function save(){
     let oldc = document.getElementById("classic").checked;
-    chrome.storage.sync.set({
+    browser.storage.sync.set({
         old: oldc
     }, function(){
         let status = document.getElementById("status");
@@ -11,11 +11,7 @@ function save(){
     });
 }
 function restore() {
-  chrome.storage.sync.get({
-    old: false
-  }, function(items) {
-    document.getElementById("classic").checked = items.old;
-  });
+  browser.storage.local.get("old").then(function OnGot(item){document.getElementById("classic").checked = item;}, function OnError(error){console.log(`Error: ${error}`);})
 }
 document.addEventListener('DOMContentLoaded', restore);
 document.getElementById('save').addEventListener('click',

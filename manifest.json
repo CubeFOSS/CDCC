@@ -7,7 +7,7 @@
     "manifest_version": 2,
     "name": "Cube Discord Colour",
     "description": "Changes the colour of the discord widget on the cubecraft forums",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icons": {
       "64": "icon.png"
     },
