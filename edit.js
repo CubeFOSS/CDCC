@@ -1,5 +1,5 @@
 browser.storage.sync.get("old").then(function OnGot(item){
-    if(item){
+    if(item.old.c){
         document.getElementsByClassName("block cc_discordWidget")[0].getElementsByClassName("block-container")[0].style.backgroundColor = "#738BD7";
 }
 else{
