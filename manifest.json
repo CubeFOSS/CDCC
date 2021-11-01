@@ -1,20 +1,15 @@
 {
-    "manifest_version":3,
-    "action":{
+    "manifest_version":2,
+    "browser_action":{
+        "browser_style":true,
+        "default_titel":"CDCC",
         "default_popup":"options.html"
     },
     "name":"Cube Discord Colour",
     "version": "1.0.0",
     "description": "changes the colour of the discord thing on the cube site",
     "permissions":[
-        "storage",
-        "scripting"
-    ],
-    "host_permissions":[
-        "*://cubecraft.net/*",
-        "*://cubecraft.net/",
-        "*://*.cubecraft.net/",
-        "*://*.cubecraft.net/*"
+        "storage"
     ],
     "options_page":"options.html",
     "content_scripts":[
